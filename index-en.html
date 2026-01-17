@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House - Your Favorite Coffee Shop</title>
+    <meta name="description" content="Coffee House - Your favorite coffee shop in the heart of Prague. We roast coffee with love and offer a cozy environment for relaxation and work.">
+    <meta name="keywords" content="coffee shop, coffee, Coffee House, Prague, espresso, cappuccino, organic coffee, baristas">
+    <meta name="author" content="Coffee House">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coffee House - Your Favorite Coffee Shop">
+    <meta property="og:description" content="We roast coffee with love and offer a cozy environment in the heart of Prague.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coffee House - Your Favorite Coffee Shop">
+    <meta name="twitter:description" content="We roast coffee with love and offer a cozy environment in the heart of Prague.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+    
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="lightbox.css?v=1.0">
+    <link rel="stylesheet" href="mobile-optimizations.css?v=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <h1 class="logo">☕ Coffee House</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="index.html" class="lang-switcher" title="Switch to Czech">
+                        <span>CZ</span>
+                    </a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Special Offers Banner -->
+    <div class="offers-banner">
+        <div class="container">
+            <div class="banner-content">
+                <span class="banner-icon">🎉</span>
+                <p><strong>Special Offer:</strong> Every Monday 20% off all coffees!</p>
+                <button class="banner-close" onclick="closeBanner()">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in" data-parallax="true">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Welcome to Coffee House</h2>
+            <p>Where every cup tells a story</p>
+            <div class="hero-cta">
+                <div class="btn-wrapper">
+                    <a href="#menu" class="btn-hero btn-hero--primary">View Menu</a>
+                    <span class="btn-badge">New</span>
+                </div>
+                <a href="#about" class="btn-hero btn-hero--ghost">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Coffee, Your Story</h2>
+                    <p>Coffee House is a place where tradition meets modernity. We roast our coffee with love and care to bring you the best experience.</p>
+                    <p>Our café is a haven for coffee lovers, where you can relax, work or meet friends in a pleasant environment.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="icon">🌱</span>
+                            <h3>Organic Coffee</h3>
+                            <p>100% organic</p>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">👨‍🍳</span>
+                            <h3>Expert Baristas</h3>
+                            <p>Professional preparation</p>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">🏠</span>
+                            <h3>Cozy Atmosphere</h3>
+                            <p>Your second home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=90" alt="Coffee" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu fade-in">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" onclick="filterMenu('all')">All</button>
+                <button class="category-btn" onclick="filterMenu('coffee')">Coffee</button>
+                <button class="category-btn" onclick="filterMenu('drinks')">Drinks</button>
+                <button class="category-btn" onclick="filterMenu('food')">Desserts</button>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="coffee">
+                    <img src="https://cdn.shopify.com/s/files/1/0551/0981/2291/files/red-eye-espresso_480x480.jpg?v=1674793878" alt="Espresso" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Espresso</h3>
+                        <p>Intense and aromatic base of every quality coffee. Our espresso is prepared from freshly roasted beans and served in a glass cup to highlight its color and rich crema.</p>
+                        <span class="price">$1.90</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw30047d66/images/recipe-Images/cappuccino1-recipe.jpg?sw=600&sh=600&sm=fit" alt="Cappuccino" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Harmonious combination of espresso, velvety steamed milk and delicate milk foam. We prepare cappuccino with emphasis on balanced taste and creamy texture.</p>
+                        <span class="price">$2.70</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <span class="menu-badge discount">Sale</span>
+                    <img src="https://my-coffee-cup.at/cdn/shop/files/blog-macchiato-nespresso-kompatibel.webp?v=1721208482&width=600" alt="Macchiato" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Macchiato</h3>
+                        <p>Double espresso topped with just a light layer of milk foam. Perfect choice for those who like strong coffee with a gentle milky touch.</p>
+                        <div class="price-container">
+                            <span class="price-old">$3.08</span>
+                            <span class="price-new">$2.05</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="images/Mocha.png?v=2" alt="Mocha" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Mocha</h3>
+                        <p>Sweet coffee experience. Combines hot chocolate, espresso and whipped cream. Popular especially among sweet coffee lovers.</p>
+                        <span class="price">$3.30</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <span class="menu-badge bestseller">Bestseller</span>
+                    <img src="https://www.shutterstock.com/image-photo/italian-affogato-dessert-coffee-vanilla-260nw-2680199897.jpg" alt="Affogato" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Affogato</h3>
+                        <p>Italian dessert that combines espresso with a scoop of vanilla ice cream. Hot espresso slowly melts cold ice cream creating a creamy, sweet coffee treat.</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="https://t4.ftcdn.net/jpg/06/05/70/51/360_F_605705123_HdF1F6tjoJmDL10qW2M9wKqIf22Lp26l.jpg" alt="Viennese Coffee" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Viennese Coffee</h3>
+                        <p>Traditional specialty with strong espresso and rich layer of whipped cream. Elegance that never gets old.</p>
+                        <span class="price">$2.90</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <span class="menu-badge new">New</span>
+                    <img src="https://distefano.com.au/cdn/shop/articles/Diff_between_iced_coffee_vs_latte_960x719_7330149a-cd3c-4a5f-bf31-068de1414339.png?v=1666526776" alt="Iced Coffee" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Iced Coffee</h3>
+                        <p>Refreshing alternative for warm days. We serve espresso with milk and ice. Balance between sweetness and intense coffee taste.</p>
+                        <span class="price">$3.10</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <span class="menu-badge special">Special</span>
+                    <img src="https://secondcup.com/wp-content/uploads/2022/03/Green-mango-smoothie-1.png" alt="Smoothie" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Smoothie</h3>
+                        <p>Green smoothie full of energy – combination of mango, spinach and superfoods. Natural sweetness without added sugar.</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <img src="https://img.freepik.com/premium-photo/french-macaron-cakes-plate-close-up-cream-brown-pink-macarons-with-copy-space_4740-2532.jpg" alt="Macarons" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Macarons</h3>
+                        <p>French macarons with delicate filling. We offer chocolate, vanilla and raspberry varieties, ideal as a complement to coffee.</p>
+                        <span class="price">$2.30</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <img src="https://www.yorkshirepost.co.uk/webimg/QVNIMTI1MTk1MTQ4.jpg?crop=3:2,smart&trim=&width=640&quality=65&enable=upscale" alt="Apple Pie" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Apple Pie</h3>
+                        <p>Traditional homemade cake with apples and cinnamon. Perfect choice for classic lovers.</p>
+                        <span class="price">$2.70</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <span class="menu-badge bestseller">Bestseller</span>
+                    <img src="https://ms3.ostium.cz/instance/web-recepty/jWrQUTy0/h276w407t.jpg" alt="Lotus Cheesecake" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Lotus Cheesecake</h3>
+                        <p>No-bake cheesecake with Lotus cookies and caramel layer. Delicate and perfectly sweet dessert variant that never disappoints.</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <img src="https://ms3.ostium.cz/instance/web-recepty/pzgcDqvO/h389w574t.png" alt="Muffins" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Muffins</h3>
+                        <p>Fluffy muffins with blueberry and strawberry pieces. We bake them fresh every day for maximum taste and aroma.</p>
+                        <span class="price">$2.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery fade-in">
+        <div class="container">
+            <h2 class="section-title">Our Coffee Shop</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1000&q=90" alt="Interior" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=90" alt="Coffee cups" loading="lazy">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.stockcake.com/public/5/3/0/5309d498-14dd-4553-ac37-fce458dca638_large/cozy-coffee-shop-stockcake.jpg" alt="Barista" loading="lazy">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://t3.ftcdn.net/jpg/02/78/71/36/360_F_278713685_FS8nRZMjBFC6viFGmKvozkxqwdQ8zNE4.jpg" alt="Pastries" loading="lazy">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials fade-in">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Best coffee in Prague! The atmosphere is great and the staff is very friendly. I come here every day."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=47" alt="Jana">
+                                <div>
+                                    <h4>Jana Nováková</h4>
+                                    <span>Regular Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Nice place to work with laptop. Wifi is fast and coffee is excellent."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=12" alt="Petr">
+                                <div>
+                                    <h4>Petr Svoboda</h4>
+                                    <span>Freelancer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Amazing cappuccino and muffins. I definitely recommend to all coffee and sweet lovers!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=5" alt="Marie">
+                                <div>
+                                    <h4>Marie Dvořáková</h4>
+                                    <span>Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" onclick="prevTestimonial()">❮</button>
+                <button class="carousel-nav carousel-next" onclick="nextTestimonial()">❯</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToTestimonial(0)"></span>
+                    <span class="dot" onclick="goToTestimonial(1)"></span>
+                    <span class="dot" onclick="goToTestimonial(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation fade-in">
+        <div class="container">
+            <h2 class="section-title">Table Reservation</h2>
+            <p class="section-subtitle">Reserve your spot in our coffee shop</p>
+            <div class="reservation-form-wrapper">
+                <form class="reservation-form" onsubmit="handleReservation(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-name">Full Name</label>
+                            <input type="text" id="res-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-email">Email</label>
+                            <input type="email" id="res-email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-phone">Phone</label>
+                            <input type="tel" id="res-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-guests">Number of Guests</label>
+                            <select id="res-guests" required>
+                                <option value="">Select number</option>
+                                <option value="1">1 person</option>
+                                <option value="2">2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4">4 people</option>
+                                <option value="5">5+ people</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-date">Date</label>
+                            <input type="date" id="res-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-time">Time</label>
+                            <input type="time" id="res-time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-message">Special Requirements (optional)</label>
+                        <textarea id="res-message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Reserve Table</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Republic Square 5<br>110 00 Prague 1</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+420 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@coffeehouse.cz</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🕐</span>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Mon-Fri: 7:00 AM - 8:00 PM<br>Sat-Sun: 9:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="handleSubmit(event)">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <textarea placeholder="Your message" rows="5" required></textarea>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="map-container">
+                <h3 class="map-title">Find Us</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8269729347394!2d14.427512!3d50.087933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e8ef1e61f5%3A0x8c50e2c9c44e6e!2sN%C3%A1m%C4%9Bst%C3%AD%20Republiky%2C%20110%2000%20Star%C3%A9%20M%C4%9Bsto!5e0!3m2!1sen!2scz!4v1234567890" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter fade-in">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get exclusive offers, news and coffee tips directly to your inbox!</p>
+                </div>
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn-newsletter">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button (Mobile) -->
+    <a href="#contact" class="fab-mobile" aria-label="Reserve">
+        <i class="fas fa-shopping-bag"></i>
+        <span>Reserve</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&lt;</button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">&gt;</button>
+            <div class="lightbox-counter">
+                <span id="lightboxCount">1</span> / <span id="lightboxTotal">4</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fade-in">
+        <div class="container footer-grid">
+            <div>
+                <h3>Coffee House</h3>
+                <p>We roast coffee with love, blend stories and create a place you'll love to return to.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul class="footer-list">
+                    <li>Republic Square 5, Prague 1</li>
+                    <li>+420 123 456 789</li>
+                    <li>info@coffeehouse.cz</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Opening Hours</h4>
+                <ul class="footer-list">
+                    <li>Mon–Fri: 7:00–20:00</li>
+                    <li>Sat–Sun: 9:00–19:00</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Coffee House. All rights reserved.</div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+/* ====== MOBILE IMAGE OPTIMIZATIONS ====== */
+@media (max-width: 768px) {
+    /* Optimize images for mobile */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Reduce menu item image size on mobile */
+    .menu-item img {
+        height: 180px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+    
+    /* Gallery images - optimize for mobile screens */
+    .gallery-item {
+        height: 200px !important;
+    }
+    
+    .gallery-item img {
+        contain: layout style paint;
+    }
+    
+    /* About section image */
+    .about-image img {
+        width: 100%;
+        height: auto;
+        contain: layout style paint;
+    }
+    
+    /* Loading state for lazy images */
+    img.loading {
+        opacity: 0.6;
+    }
+    
+    img.loaded {
+        animation: fadeInImage 0.3s ease-in;
+    }
+    
+    @keyframes fadeInImage {
+        from {
+            opacity: 0.6;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+/* ====== MOBILE MENU BOTTOM SHEET ====== */
+@media (max-width: 768px) {
+    /* Smaller icons on mobile */
+    .lang-switcher {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    .mobile-menu-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+
+    .nav-links.mobile-active {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        width: 100%;
+        transform: translateY(0);
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        border-radius: 20px 20px 0 0;
+        padding: 2rem 0;
+        max-height: 80vh;
+        overflow-y: auto;
+        animation: slideUp 0.4s ease-out;
+        z-index: 999;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+    }
+    
+    .nav-links.mobile-active a {
+        display: block;
+        padding: 1.2rem 2rem;
+        border-bottom: 1px solid var(--light);
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    
+    .nav-links.mobile-active a:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-links.mobile-active a:hover {
+        background: var(--light);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer Mobile Optimization */
+@media (max-width: 768px) {
+    .footer-grid {
+        text-align: center;
+    }
+    
+    .footer-list,
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* ====== OPTIMIZED BUTTONS (Minimum Touch Size: 44x44px) ====== */
+
+/* All interactive elements */
+button,
+a[href],
+input[type="button"],
+input[type="submit"],
+.btn,
+.btn-hero,
+.btn-newsletter,
+.lightbox-close,
+.lightbox-nav,
+.back-to-top,
+.fab-mobile {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific button optimizations */
+@media (max-width: 768px) {
+    .category-btn {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    .btn-hero {
+        min-width: 100%;
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .btn-newsletter {
+        min-width: 100%;
+        min-height: 48px;
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .order-btn {
+        min-width: 100%;
+        min-height: 48px;
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .nav-actions button {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.5rem;
+    }
+    
+    /* Form inputs */
+    input[type="email"],
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    input[type="tel"],
+    textarea,
+    select {
+        min-height: 48px;
+        padding: 0.8rem;
+        font-size: 16px;
+    }
+    
+    /* Prevent zoom on iOS when input is focused */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+    
+    /* Links that should be clickable */
+    a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    /* Extra padding for touch targets */
+    .menu-categories {
+        gap: 0.8rem;
+    }
+}
+
+/* ====== TOUCH FEEDBACK ====== */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch devices - remove hover effects, add active states */
+    button:active,
+    a:active {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+}
+
+/* ====== MOBILE FORM OPTIMIZATIONS ====== */
+@media (max-width: 768px) {
+    .contact-form,
+    .reservation-form-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    label {
+        font-size: 0.95rem;
+    }
+}
+
+/* ====== IMPROVED TOUCH AREAS ====== */
+@media (max-width: 768px) {
+    /* Gallery items - easier to tap */
+    .gallery-item {
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        user-select: none;
+    }
+    
+    /* Menu items - bigger tap area */
+    .menu-item {
+        cursor: pointer;
+    }
+    
+    /* FAB buttons */
+    .fab-mobile,
+    .back-to-top {
+        min-width: 56px;
+        min-height: 56px;
+    }
+}
+
+/* ====== ACCESSIBILITY ====== */
+@media (max-width: 768px) {
+    /* Ensure focus states are visible */
+    button:focus,
+    a:focus,
+    input:focus {
+        outline: 2px solid var(--secondary);
+        outline-offset: 2px;
+    }
+    
+    /* Remove default blue highlight on links */
+    a {
+        -webkit-tap-highlight-color: rgba(111, 78, 55, 0.1);
+    }
+}

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Coffee House - Tvoje oblíbená kavárna</title>
+    <meta name="description" content="Coffee House - Vaše oblíbená kavárna v srdci Prahy. Pražíme kávu s láskou a nabízíme útulné prostředí pro relaxaci a práci.">
+    <meta name="keywords" content="kavárna, káva, Coffee House, Praha, espresso, cappuccino, bio káva, baristé">
+    <meta name="author" content="Coffee House">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coffee House - Tvoje oblíbená kavárna">
+    <meta property="og:description" content="Pražíme kávu s láskou a nabízíme útulné prostředí v srdci Prahy.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coffee House - Tvoje oblíbená kavárna">
+    <meta name="twitter:description" content="Pražíme kávu s láskou a nabízíme útulné prostředí v srdci Prahy.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+    
+    <link rel="stylesheet" href="style.css?v=3.1">
+    <link rel="stylesheet" href="lightbox.css?v=1.0">
+    <link rel="stylesheet" href="mobile-optimizations.css?v=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <h1 class="logo">☕ Coffee House</h1>
+                <ul class="nav-links">
+                    <li><a href="#home" data-translate="nav-home">Domů</a></li>
+                    <li><a href="#menu" data-translate="nav-menu">Menu</a></li>
+                    <li><a href="#about" data-translate="nav-about">O nás</a></li>
+                    <li><a href="#gallery" data-translate="nav-gallery">Galerie</a></li>
+                    <li><a href="#contact" data-translate="nav-contact">Kontakt</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="index-en.html" class="lang-switcher" title="Switch to English">
+                        <span>EN</span>
+                    </a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Special Offers Banner -->
+    <div class="offers-banner">
+        <div class="container">
+            <div class="banner-content">
+                <span class="banner-icon">🎉</span>
+                <p><strong>Speciální nabídka:</strong> Každé pondělí 20% sleva na všechny kávy!</p>
+                <button class="banner-close" onclick="closeBanner()">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in" data-parallax="true">
+        <div class="hero-bg"></div>
+        <canvas class="hero-coffee-beans" aria-hidden="true"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 data-translate="hero-title">Vítejte v Coffee House</h2>
+            <p data-translate="hero-subtitle">Kde každý šálek vypráví příběh</p>
+            <div class="hero-cta">
+                <div class="btn-wrapper">
+                    <a href="#menu" class="btn-hero btn-hero--primary" data-translate="hero-btn">Prohlédnout menu</a>
+                    <span class="btn-badge">Novinka</span>
+                </div>
+                <a href="#about" class="btn-hero btn-hero--ghost">Zjistit víc</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Naše káva, váš příběh</h2>
+                    <p>Coffee House je místo, kde se tradice setkává s novými nápady. Pražíme naši kávu s láskou a pečlivostí, abychom vám přinesli ten nejlepší zážitek.</p>
+                    <p>Naše kavárna je útočištěm pro milovníky kávy, kde můžete relaxovat, pracovat nebo se setkat s přáteli v příjemném prostředí.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="icon">🌱</span>
+                            <h3>Bio káva</h3>
+                            <p>100% organická</p>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">👨‍🍳</span>
+                            <h3>Zkušení baristé</h3>
+                            <p>Profesionální příprava</p>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">🏠</span>
+                            <h3>Útulné prostředí</h3>
+                            <p>Váš druhý domov</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=90" alt="Coffee" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu fade-in">
+        <div class="container">
+            <h2 class="section-title">Naše menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" onclick="filterMenu('all')">Vše</button>
+                <button class="category-btn" onclick="filterMenu('coffee')">Káva</button>
+                <button class="category-btn" onclick="filterMenu('drinks')">Nápoje</button>
+                <button class="category-btn" onclick="filterMenu('food')">Dezerty</button>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="coffee">
+                    <img src="images/Espresso.png" alt="Espresso" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Espresso</h3>
+                        <p>Intenzivní a aromatický základ každé kvalitní kávy. Naše espresso se připravuje z čerstvě pražených zrn a servíruje se ve skleněné šálku, aby vynikla jeho barva i bohatá crema.</p>
+                        <span class="price">45 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="images/Cappuccino.png" alt="Cappuccino" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Harmonické spojení espressa, sametově našlehaného mléka a jemné mléčné pěny. Cappuccino připravujeme s důrazem na vyváženou chuť a krémovou texturu.</p>
+                        <span class="price">65 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <span class="menu-badge discount">Akce</span>
+                    <img src="images/Macchiato.png" alt="Macchiato" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Macchiato</h3>
+                        <p>Dvojité espresso doplněné pouze lehkou vrstvou mléčné pěny. Ideální volba pro ty, kteří mají rádi výraznou kávu s jemným mléčným dotekem.</p>
+                        <div class="price-container">
+                            <span class="price-old">75 Kč</span>
+                            <span class="price-new">50 Kč</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="images/Mocha.png?v=2" alt="Mocha" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Mocha</h3>
+                        <p>Sladký kávový zážitek. Spojuje v sobě horkou čokoládu, espresso a šlehačku. Oblíbené především u milovníků sladkých káv.</p>
+                        <span class="price">80 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <span class="menu-badge bestseller">Bestseller</span>
+                    <img src="images/Affogato.png" alt="Affogato" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Affogato</h3>
+                        <p>Italský dezert, který kombinuje espresso s kopečkem vanilkové zmrzliny. Horké Espresso pomalu rozpouští studenou zmrzlinu a vytváří krémovou, sladkou kávovou pochoutku.</p>
+                        <span class="price">85 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="images/Vídeňská káva.png" alt="Vídeňská káva" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Vídeňská káva</h3>
+                        <p>Tradiční specialita se silným espressem, bohatou vrstvou šlehačky. Elegance, která nikdy neomrzí.</p>
+                        <span class="price">70 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <span class="menu-badge new">Novinka</span>
+                    <img src="images/Ledová káva.png" alt="Ledová káva" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Ledová káva</h3>
+                        <p>Osvěžující alternativa pro teplé dny. Espresso podáváme s mlékem a ledem. Balanc mezi sladkostí a intenzivní chutí kávy.</p>
+                        <span class="price">75 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <span class="menu-badge special">Speciální</span>
+                    <img src="https://secondcup.com/wp-content/uploads/2022/03/Green-mango-smoothie-1.png" alt="Smoothie" loading="lazy">
+                    <div class="menu-item-content">
+                        <h3>Smoothie</h3>
+                        <p>Zelené smoothie plné energie – kombinace manga, špenátu a superfoods. Přirozená sladkost bez přidaného cukru.</p>
+                        <span class="price">85 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <img src="https://img.freepik.com/premium-photo/french-macaron-cakes-plate-close-up-cream-brown-pink-macarons-with-copy-space_4740-2532.jpg" alt="Makronky">
+                    <div class="menu-item-content">
+                        <h3>Makronky</h3>
+                        <p>Francouzské makronky s jemnou náplní. Nabízíme čokoládové, vanilkové a malinové varianty, ideální jako doplněk ke kávě.</p>
+                        <span class="price">55 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <img src="https://www.yorkshirepost.co.uk/webimg/QVNIMTI1MTk1MTQ4.jpg?crop=3:2,smart&trim=&width=640&quality=65&enable=upscale" alt="Jablečný koláč">
+                    <div class="menu-item-content">
+                        <h3>Jablečný koláč</h3>
+                        <p>Tradiční domácí koláč s jablky a skořicí. Ideální volba pro milovníky klasiky.</p>
+                        <span class="price">65 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <span class="menu-badge bestseller">Bestseller</span>
+                    <img src="https://scottishscran.com/wp-content/uploads/2022/03/Lotus-Biscoff-Cheesecake-Recipe-12-1.jpg" alt="Lotus cheesecake">
+                    <div class="menu-item-content">
+                        <h3>Lotus cheesecake</h3>
+                        <p>Nepečený cheesecake s Lotus sušenkami a karamelovou vrstvou. Jemná a dokonale sladká varianta dezertu, který nikdy nezklame.</p>
+                        <span class="price">85 Kč</span>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="food">
+                    <img src="https://ms3.ostium.cz/instance/web-recepty/pzgcDqvO/h389w574t.png" alt="Muffiny">
+                    <div class="menu-item-content">
+                        <h3>Muffiny</h3>
+                        <p>Nadýchané muffiny s kousky borůvek a jahod. Pečeme je čerstvé každý den pro maximální chuť i vůni.</p>
+                        <span class="price">60 Kč</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery fade-in">
+        <div class="container">
+            <h2 class="section-title">Naše kavárna</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.stockcake.com/public/8/d/6/8d641a71-6341-4f94-bbd1-c599b3515dea/cozy-coffee-spot-stockcake.jpg" alt="Interior" loading="lazy">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=90" alt="Coffee cups" loading="lazy">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.shopify.com/s/files/1/0692/1034/1690/files/StockCake-Cozy_coffee_shop_1747760325_1024x1024.webp?v=1747760554" alt="Barista">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.tha.de/Binaries/Binary41474/COLOURBOX40790575.jpg" alt="Pastries">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials fade-in">
+        <div class="container">
+            <h2 class="section-title">Co říkají naši zákazníci</h2>
+            <div class="testimonials-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Nejlepší káva v Praze! Atmosféra je skvělá a personál velmi přátelský. Chodím sem každý den."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=47" alt="Jana">
+                                <div>
+                                    <h4>Jana Nováková</h4>
+                                    <span>Pravidelná zákaznice</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Příjemné místo na práci s laptopem. Wifi je rychlá a káva vynikající."</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=12" alt="Petr">
+                                <div>
+                                    <h4>Petr Svoboda</h4>
+                                    <span>Freelancer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <p class="testimonial-text">"Úžasné cappuccino a muffiny. Určitě doporučuji všem milovníkům kávy a sladkého!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.pravatar.cc/100?img=5" alt="Marie">
+                                <div>
+                                    <h4>Marie Dvořáková</h4>
+                                    <span>Studentka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" onclick="prevTestimonial()">❮</button>
+                <button class="carousel-nav carousel-next" onclick="nextTestimonial()">❯</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToTestimonial(0)"></span>
+                    <span class="dot" onclick="goToTestimonial(1)"></span>
+                    <span class="dot" onclick="goToTestimonial(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation fade-in">
+        <div class="container">
+            <h2 class="section-title">Rezervace stolu</h2>
+            <p class="section-subtitle">Zajistěte si místo v naší kavárně</p>
+            <div class="reservation-form-wrapper">
+                <form class="reservation-form" onsubmit="handleReservation(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-name">Jméno a příjmení</label>
+                            <input type="text" id="res-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-email">Email</label>
+                            <input type="email" id="res-email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-phone">Telefon</label>
+                            <input type="tel" id="res-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-guests">Počet hostů</label>
+                            <select id="res-guests" required>
+                                <option value="">Vyberte počet</option>
+                                <option value="1">1 osoba</option>
+                                <option value="2">2 osoby</option>
+                                <option value="3">3 osoby</option>
+                                <option value="4">4 osoby</option>
+                                <option value="5">5+ osob</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-date">Datum</label>
+                            <input type="date" id="res-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-time">Čas</label>
+                            <input type="time" id="res-time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-message">Speciální požadavky (volitelné)</label>
+                        <textarea id="res-message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Rezervovat stůl</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <h3>Adresa</h3>
+                            <p>Náměstí Republiky 5<br>110 00 Praha 1</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>+420 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@coffeehouse.cz</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🕐</span>
+                        <div>
+                            <h3>Otevírací doba</h3>
+                            <p>Po-Pá: 7:00 - 20:00<br>So-Ne: 9:00 - 19:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="contact-name">Vaše jméno</label>
+                            <input type="text" id="contact-name" placeholder="Vaše jméno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Váš email</label>
+                            <input type="email" id="contact-email" placeholder="Váš email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Vaše zpráva</label>
+                            <textarea id="contact-message" placeholder="Vaše zpráva" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Odeslat zprávu</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="map-container">
+                <h3 class="map-title">Kde nás najdete</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8269729347394!2d14.427512!3d50.087933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e8ef1e61f5%3A0x8c50e2c9c44e6e!2sN%C3%A1m%C4%9Bst%C3%AD%20Republiky%2C%20110%2000%20Star%C3%A9%20M%C4%9Bsto!5e0!3m2!1scs!2scz!4v1234567890" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter fade-in">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Přihlaste se k odběru novinek</h2>
+                    <p>Získejte exkluzivní nabídky, novinky a tipy o kávě přímo do vaší emailové schránky!</p>
+                </div>
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Váš email" required>
+                    <button type="submit" class="btn-newsletter">Odebírat</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer fade-in">
+        <div class="container footer-grid">
+            <div>
+                <h3>Coffee House</h3>
+                <p>Pražíme kávu s láskou, mícháme příběhy a vytváříme místo, kam se budete rádi vracet.</p>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <ul class="footer-list">
+                    <li>Náměstí Republiky 5, Praha 1</li>
+                    <li>+420 123 456 789</li>
+                    <li>info@coffeehouse.cz</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Otevírací doba</h4>
+                <ul class="footer-list">
+                    <li>Po–Pá: 7:00–20:00</li>
+                    <li>So–Ne: 9:00–19:00</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Coffee House. Všechna práva vyhrazena.</div>
+    </footer>
+
+    <!-- Floating Action Button (Mobile) -->
+    <a href="#reservation" class="fab-mobile" aria-label="Rezervovat">
+        <i class="fas fa-shopping-bag"></i>
+        <span>Rezervovat</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Na začátek stránky">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&lt;</button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">&gt;</button>
+            <div class="lightbox-counter">
+                <span id="lightboxCount">1</span> / <span id="lightboxTotal">4</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

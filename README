@@ -1,0 +1,38 @@
+# ☕ Coffee House Web - Moderní responzivní web pro kavárnu s atraktivním designem a animacemi.
+
+## Frontend
+- **HTML5** - struktura stránky
+- **CSS3** - (Flexbox, Grid, Animace)
+- **JavaScript** - (ES6+)
+- **Unsplash API** - (obrázky)
+- **Google Maps** - (mapa)
+- **Adobe Firefly** - (AI obrázky)
+
+## ✨ Funkce
+- **Responzivní design** - pro všechna zařízení
+- **Plynulá navigace** - mezi sekcemi s smooth scroll
+- **Filtrovatelné menu** - káva, nápoje, jídlo
+- **Galerie obrázků** - s hover efekty
+- **Kontaktní formulář** - s validací
+- **Rezervační systém** - online rezervace stolů
+- **Newsletter** - přihlášení k odběru novinek
+- **Recenze zákazníků** - ukázka potencionálním zákazníkům, že kavárna je oblíbená a důvěryhodná.
+- **Special offers banner** - zvýrazněné akční nabídky
+- **Animace při scrollování** - IntersectionObserver API
+- **Mobilní menu** - hamburger menu pro mobilní zařízení
+- **Scroll to top tlačítko** - rychlý návrat nahoru
+- **Loading animace** - při načítání stránky
+- **SEO optimalizace** - meta tagy, Open Graph
+- **Favicon** - ikona kávy v záložce
+
+## 📋 Sekce
+1. **Hero** - s pozadím a call-to-action tlačítkem
+2. **Special Offers Banner** - akční nabídky a novinky
+3. **O nás** - s vlastnostmi kavárny (Bio káva, Zkušení baristé, Útulné prostředí)
+4. **Menu** - s filtry kategorií a cenami
+5. **Galerie** - fotky kavárny a produktů
+6. **Rezervace** - formulář pro rezervaci stolů
+7. **Kontakt** - kontaktní informace, formulář a mapa
+8. **Newsletter** - přihlášení k odběru
+9. **Footer** - rychlé odkazy a sociální sítě
+10. **Recenze** - hodnocení spokojených zákazníků
